@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Happy Birthday Adi!">
+    <title>Adi's Birthday Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="bday-message">
+            <h2>BDAY MONTH GIFT TO ALREADY RCB NE DEDIA AB ME KYA HI KARU</h2>
+        </div>
+        <div style="text-align:center; margin-bottom: 18px;">
+            <button id="music-toggle" style="background:var(--primary-color);color:#fff;padding:8px 18px;border:none;border-radius:8px;cursor:pointer;font-size:1rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.10);transition:background 0.2s;">Play Adi's Song 🎵</button>
+            <audio id="adi-audio" src="WhatsApp Audio 2025-06-07 at 17.40.41_8749890c.dat"></audio>
+        </div>
+
+
+        <header>
+            <h1>Countdown to Adi's Birthday</h1>
+            <div class="countdown-container">
+                <div id="countdown" class="countdown">
+                    <div class="time">
+                        <h2 id="days">00</h2>
+                        <small>Days</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="hours">00</h2>
+                        <small>Hours</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="minutes">00</h2>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="seconds">00</h2>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="adi-meme"></div>
+
+        <section class="about-section">
+            <h2>About Adi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <ul>
+                        <li><i class="fas fa-shoe-prints"></i> Loves to wear Crocs</li>
+                        <li><i class="fas fa-music"></i> Sings on ukulele</li>
+                        <li><i class="fas fa-umbrella-beach"></i> Loves Bali</li>
+                        <li><i class="fas fa-cricket"></i> 🏏 RCB fan</li>
+                        <li><i class="fas fa-graduation-cap"></i> Never got 9 GPA</li>
+                        <li><i class="fas fa-dumbbell"></i> Goes to gym but still "motu"</li>
+                        <li><i class="fas fa-glasses"></i> "Chashme ke bina adha hai"</li>
+                        <li><i class="fas fa-mug-hot"></i> Loves hot chocolate</li>
+                        <li><i class="fas fa-dog"></i> Makes puppy face to pass vivas</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="slideshow-container">
+                        <div class="adi-slideshow">
+                            <img src="adi2.jpg" alt="Adi's Photo" class="adi-photo active">
+                            <img src="adi3.jpg" alt="Adi's Photo" class="adi-photo">
+                            <img src="adi4.jpg" alt="Adi's Photo" class="adi-photo">
+                            <img src="adi5.jpg" alt="Adi's Photo" class="adi-photo">
+                            <img src="adi6.jpg" alt="Adi's Photo" class="adi-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <h2>Birthday Games</h2>
+            <div class="games-nav">
+                <button class="game-btn active" data-game="wordle">Adi Wordle</button>
+                <button class="game-btn" data-game="connections">Adi Connections</button>
+                <button class="game-btn" data-game="trivia">Adi Trivia</button>
+            </div>
+
+            <div class="game-container">
+                <!-- Wordle Game -->
+                <div id="wordle-game" class="game-content active">
+                    <h3>Adi Wordle</h3>
+                    <div class="wordle-info">
+                        <p>Guess the ADIWORD in 6 tries.</p>
+                        <p>Each guess must be a valid 5-letter word. Hit Enter to submit.</p>
+                        <div class="wordle-keyboard-info">
+                            <div class="info-row">
+                                <span class="info-key green">A</span>
+                                <span class="info-text">The letter A is in the word and in the correct spot.</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key yellow">A</span>
+                                <span class="info-text">The letter A is in the word but in the wrong spot.</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key gray">A</span>
+                                <span class="info-text">The letter A is not in the word in any spot.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wordle-grid">
+    <!-- Rows will be generated by JavaScript -->
+</div>
+<div id="message" class="wordle-message"></div>
+<div class="keyboard">
+    <!-- Keyboard will be generated by JavaScript -->
+</div>
+                </div>
+
+                <!-- Connections Game -->
+                <div id="connections-game" class="game-content">
+                    <h3>Adi Connections</h3>
+                    <p>Find groups of four related words. All connections are related to Adi!</p>
+                    <div class="connections-grid">
+                        <!-- Connections tiles will be generated by JavaScript -->
+                    </div>
+                    <div class="connections-groups">
+                        <!-- Groups will be shown here -->
+                    </div>
+                </div>
+
+                <!-- Trivia Game -->
+                <div id="trivia-game" class="game-content">
+                    <h3>Adi Trivia</h3>
+                    <p>Test your knowledge about Adi!</p>
+                    <div class="trivia-container">
+                        <div class="question-container">
+                            <p id="question">Click Start to begin the trivia!</p>
+                            <div id="options" class="options-container">
+                                <!-- Options will be generated by JavaScript -->
+                            </div>
+                        </div>
+                        <button id="start-trivia" class="start-btn">Start Trivia</button>
+                        <div id="result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sitcoms Section -->
+        <section class="sitcoms-section">
+            <h2>Adi's Favorite Sitcoms</h2>
+            <div class="sitcoms-container">
+                <div class="sitcom-card" data-show="friends">
+                    <div class="sitcom-image">
+                        <img src="friends.jpeg" alt="Friends">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>Friends</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"How you doin'?" - Joey</p>
+                            <p class="quote">"We were on a break!" - Ross</p>
+                            <p class="quote">"Could I BE wearing any more clothes?" - Chandler</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sitcom-card" data-show="himym">
+                    <div class="sitcom-image">
+                        <img src="https://flxt.tmsimg.com/assets/p185124_b_v8_ah.jpg" alt="How I Met Your Mother">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>How I Met Your Mother</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"Legen... wait for it... dary!" - Barney</p>
+                            <p class="quote">"Challenge accepted!" - Barney</p>
+                            <p class="quote">"Nothing good happens after 2 AM." - Ted</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sitcom-card" data-show="b99">
+                    <div class="sitcom-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_.jpg" alt="Brooklyn Nine-Nine">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>Brooklyn Nine-Nine</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"Cool, cool, cool, cool, cool." - Jake</p>
+                            <p class="quote">"Nine-Nine!" - Everyone</p>
+                            <p class="quote">"Title of your sex tape." - Jake</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sitcom-card" data-show="toohottohandle">
+                    <div class="sitcom-image">
+                        <img src="toohottohandle.jpeg" alt="Too Hot To Handle">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>Too Hot To Handle</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"No kissing, no heavy petting, and no sex of any kind."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sitcom-card" data-show="roadies">
+                    <div class="sitcom-image">
+                        <img src="roadies.jpeg" alt="Roadies">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>Roadies</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"Roadies is not a cult, it's a way of life!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sitcom-card" data-show="splitsvilla">
+                    <div class="sitcom-image">
+                        <img src="splitsvilla.jpeg" alt="Splitsvilla">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>Splitsvilla</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"Welcome to Splitsvilla, where love is a game!"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sitcom-card" data-show="3idiots">
+                    <div class="sitcom-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="3 Idiots">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>3 Idiots</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"Aal izz well!"</p>
+                            <p class="quote">"Life is a race. If you don't run fast, you'll get trampled."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sitcom-card" data-show="housefull">
+                    <div class="sitcom-image">
+                        <img src="houseful.webp" alt="Housefull">
+                    </div>
+                    <div class="sitcom-info">
+                        <h3>Housefull</h3>
+                        <div class="quotes-container">
+                            <p class="quote">"I'm joking... I'm joking!"</p>
+                            <p class="quote">"Aakhri pasta!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-sitcom">
+                <h3>Add a New Sitcom</h3>
+                <div class="add-sitcom-form">
+                    <input type="text" id="sitcom-name" placeholder="Sitcom Name">
+                    <input type="text" id="sitcom-quote" placeholder="Favorite Quote">
+                    <button id="add-sitcom-btn">Add Sitcom</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rap Memory Game Section -->
+        <section class="rap-memory-section">
+            <h2>Adi's Rap Memory Game</h2>
+            <div class="game-instructions">
+                <p>Match lyrics from the same rapper to win! Find all pairs to complete the game.</p>
+                <button id="start-rap-memory" class="start-btn">Start New Game</button>
+                <div class="rap-game-stats">
+                    <span id="rap-pairs-found">0</span> pairs found | 
+                    <span id="rap-moves">0</span> moves | 
+                    <span id="rap-timer">00:00</span>
+                </div>
+            </div>
+            
+            <div id="rap-memory-board" class="rap-memory-board">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+            
+            <div class="rap-artists-info">
+                <h3>Featured Rappers</h3>
+                <div class="rap-artists-container">
+                    <div class="rap-artist">
+                        <img src="seedhemaut.jpeg" alt="Seedhe Maut">
+                        <h4>Seedhe Maut</h4>
+                    </div>
+                    <div class="rap-artist">
+                        <img src="bali.jpeg" alt="Bali">
+                        <h4>Bali</h4>
+                    </div>
+                    <div class="rap-artist">
+                        <img src="dankrishu.jpeg" alt="Dank Rishu">
+                        <h4>Dank Rishu</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> for Adi's Birthday on June 11, 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="interactive.js"></script>
+    <script src="rap-memory-game.js"></script>
+    <script src="slideshow.js"></script>
+<script src="canvas-confetti.min.js"></script>
+    <button id="theme-toggle" class="theme-toggle-btn" title="Switch theme" aria-label="Switch theme">🌙</button>
+</body>
+</html>
