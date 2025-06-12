@@ -1,4 +1,4 @@
-# Adi Birthday Countdown & Games 🎉
+# Adi Birthday Countdown 🎉
 
 A fun, interactive, and personalized birthday website for Aditya (Popli)!  
 Features custom Wordle, Connections, Trivia, memes, music, and more — all with beautiful dark/light/fun themes and a birthday countdown.
